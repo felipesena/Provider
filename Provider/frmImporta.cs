@@ -5,16 +5,17 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Provider
 {
-    public partial class frmPrincipal : Form
+    public partial class frmImporta : Form
     {
-        string planilhaPreencher;
+        string planilhaImporta;
 
-        public frmPrincipal()
+        public frmImporta()
         {
             InitializeComponent();
         }
@@ -28,15 +29,21 @@ namespace Provider
 
             if (arquivo.ShowDialog() == DialogResult.OK)
             {
-                planilhaPreencher = arquivo.FileName;
+                planilhaImporta = arquivo.FileName;
                 txbArquivo.Text = arquivo.FileName;
             }
         }
 
-        private void importarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnImportar_Click(object sender, EventArgs e)
         {
-            Form frmImporta = new frmImporta();
-            frmImporta.ShowDialog();
+            try
+            {
+                Cliente.Importar(planilhaImporta);
+            }
+            catch(FileNotFoundException error)
+            {
+                MessageBox.Show(this.Text, error.Message, MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
