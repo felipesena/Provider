@@ -67,11 +67,23 @@
     <Compile Include="frmNotification.Designer.cs">
       <DependentUpon>frmNotification.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNovo.Designer.cs">
+      <DependentUpon>frmNovo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipal.Designer.cs">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisualiza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisualiza.Designer.cs">
+      <DependentUpon>frmVisualiza.cs</DependentUpon>
     </Compile>
     <Compile Include="Planilha.cs" />
     <Compile Include="Program.cs" />
@@ -82,8 +94,14 @@
     <EmbeddedResource Include="frmNotification.resx">
       <DependentUpon>frmNotification.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNovo.resx">
+      <DependentUpon>frmNovo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisualiza.resx">
+      <DependentUpon>frmVisualiza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,6 +111,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -110,6 +129,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icone.ico" />
+    <None Include="Resources\icone.ico" />
+    <None Include="Resources\check.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

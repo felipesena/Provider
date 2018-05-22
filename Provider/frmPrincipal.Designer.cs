@@ -59,13 +59,13 @@
             this.txbArquivo.Location = new System.Drawing.Point(83, 62);
             this.txbArquivo.Name = "txbArquivo";
             this.txbArquivo.ReadOnly = true;
-            this.txbArquivo.Size = new System.Drawing.Size(137, 23);
+            this.txbArquivo.Size = new System.Drawing.Size(239, 23);
             this.txbArquivo.TabIndex = 1;
             // 
             // btnProcurar
             // 
             this.btnProcurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProcurar.Location = new System.Drawing.Point(226, 59);
+            this.btnProcurar.Location = new System.Drawing.Point(328, 62);
             this.btnProcurar.Name = "btnProcurar";
             this.btnProcurar.Size = new System.Drawing.Size(82, 26);
             this.btnProcurar.TabIndex = 2;
@@ -75,16 +75,15 @@
             // 
             // progressBarStatus
             // 
-            this.progressBarStatus.Location = new System.Drawing.Point(51, 164);
+            this.progressBarStatus.Location = new System.Drawing.Point(83, 178);
             this.progressBarStatus.Name = "progressBarStatus";
-            this.progressBarStatus.Size = new System.Drawing.Size(257, 23);
+            this.progressBarStatus.Size = new System.Drawing.Size(327, 23);
             this.progressBarStatus.TabIndex = 0;
-            this.progressBarStatus.Visible = false;
             // 
             // btnPreencher
             // 
             this.btnPreencher.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPreencher.Location = new System.Drawing.Point(222, 132);
+            this.btnPreencher.Location = new System.Drawing.Point(328, 132);
             this.btnPreencher.Name = "btnPreencher";
             this.btnPreencher.Size = new System.Drawing.Size(145, 26);
             this.btnPreencher.TabIndex = 4;
@@ -98,7 +97,7 @@
             this.menuPrincipal.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
             this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipal.Name = "menuPrincipal";
-            this.menuPrincipal.Size = new System.Drawing.Size(379, 24);
+            this.menuPrincipal.Size = new System.Drawing.Size(481, 24);
             this.menuPrincipal.TabIndex = 5;
             // 
             // cadastroToolStripMenuItem
@@ -114,19 +113,20 @@
             // novoToolStripMenuItem
             // 
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.novoToolStripMenuItem.Text = "&Novo";
             // 
             // visualizarToolStripMenuItem
             // 
             this.visualizarToolStripMenuItem.Name = "visualizarToolStripMenuItem";
-            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.visualizarToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.visualizarToolStripMenuItem.Text = "&Visualizar";
+            this.visualizarToolStripMenuItem.Click += new System.EventHandler(this.visualizarToolStripMenuItem_Click);
             // 
             // importarToolStripMenuItem
             // 
             this.importarToolStripMenuItem.Name = "importarToolStripMenuItem";
-            this.importarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.importarToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.importarToolStripMenuItem.Text = "&Importar";
             this.importarToolStripMenuItem.Click += new System.EventHandler(this.importarToolStripMenuItem_Click);
             // 
@@ -134,7 +134,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(379, 196);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(481, 211);
             this.Controls.Add(this.btnPreencher);
             this.Controls.Add(this.progressBarStatus);
             this.Controls.Add(this.btnProcurar);

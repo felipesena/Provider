@@ -38,7 +38,16 @@ namespace Provider
         {
             try
             {
+                lbStatus.Text = "Status: Importando arquivo...";
+                Cursor.Current = Cursors.WaitCursor;
+
                 Cliente.Importar(planilhaImporta);
+                Form frmNotificaiton = new frmNotification("Importado com sucesso");
+                frmNotificaiton.Show();
+
+                lbStatus.Text = "Status:";
+                Cursor.Current = Cursors.Default;
+                Cliente.Inicializa();
             }
             catch(FileNotFoundException error)
             {

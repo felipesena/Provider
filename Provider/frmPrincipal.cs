@@ -17,6 +17,7 @@ namespace Provider
         public frmPrincipal()
         {
             InitializeComponent();
+            Cliente.Inicializa();
         }
 
         private void btnProcurar_Click(object sender, EventArgs e)
@@ -37,6 +38,13 @@ namespace Provider
         {
             Form frmImporta = new frmImporta();
             frmImporta.ShowDialog();
+        }
+
+        private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form frmVisualiza = new frmVisualiza(this);
+            frmVisualiza.ShowDialog();
         }
     }
 }

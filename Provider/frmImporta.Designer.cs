@@ -33,6 +33,7 @@
             this.txbArquivo = new System.Windows.Forms.TextBox();
             this.btnProcurar = new System.Windows.Forms.Button();
             this.btnImportar = new System.Windows.Forms.Button();
+            this.lbStatus = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbArquivo
@@ -77,16 +78,28 @@
             this.btnImportar.UseVisualStyleBackColor = true;
             this.btnImportar.Click += new System.EventHandler(this.btnImportar_Click);
             // 
+            // lbStatus
+            // 
+            this.lbStatus.AutoSize = true;
+            this.lbStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStatus.Location = new System.Drawing.Point(49, 103);
+            this.lbStatus.Name = "lbStatus";
+            this.lbStatus.Size = new System.Drawing.Size(52, 17);
+            this.lbStatus.TabIndex = 2;
+            this.lbStatus.Text = "Status:";
+            // 
             // frmImporta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 174);
+            this.Controls.Add(this.lbStatus);
             this.Controls.Add(this.btnImportar);
             this.Controls.Add(this.btnProcurar);
             this.Controls.Add(this.txbArquivo);
             this.Controls.Add(this.lbArquivo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmImporta";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Importação";
@@ -101,5 +114,6 @@
         private System.Windows.Forms.TextBox txbArquivo;
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Button btnImportar;
+        private System.Windows.Forms.Label lbStatus;
     }
 }
