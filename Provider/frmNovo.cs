@@ -81,7 +81,7 @@ namespace Provider
 
         private List<string> FormataEmails()
         {
-            
+            return rtbEmails.Text.Split(new char[] { ';', '\n' }, StringSplitOptions.RemoveEmptyEntries).ToList<string>();
         }
     }
 }

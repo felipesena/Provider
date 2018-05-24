@@ -34,8 +34,9 @@ namespace Provider
         private void NovoCliente(Cliente cliente)
         {
             if (cliente != null)
-                Cliente.Novo(cliente);            
+                Cliente.Novo(cliente);
 
+            dataGridClientes.DataSource = Cliente.clientes;
             dataGridClientes.Refresh();
         }
         
@@ -61,7 +62,7 @@ namespace Provider
             if (result == DialogResult.Yes)
             {
                 Cliente.Apaga(cliente);
-                dataGridClientes.DataSource = Cliente.clientes;
+                dataGridClientes.DataSource = (Cliente.clientes.Count > 0) ? Cliente.clientes : null;
                 dataGridClientes.Refresh();
             }
         }
